@@ -134,8 +134,7 @@ public class CopyDetailsActivity extends AppCompatActivity {
                     public Publisher<BaseResponseInfo<QuanziInfo>> apply(CopyDetailsInfo.ResultBean resultBean) throws Exception {
                         copyDetailsResult = resultBean;
                         return RetrofitHelper.createQuanziService()
-                                .getQuanziInfos(-1, Long.valueOf(activityId), -1, 8, -1, -1,
-                                        "dbe5b18fe665dbc25d22cdeb2d5cc436#");
+                                .getQuanziInfos(-1, Long.valueOf(activityId), -1, 8, -1, -1, "dbe5b18fe665dbc25d22cdeb2d5cc436#");
                     }
                 })
                 .map(BaseResponseInfo::getBaseResult)
